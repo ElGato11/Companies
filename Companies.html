@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="Companies.css" type="text/css">
 </head>
 <body>
-    
+    <div id="container">
+        <div id="options">
+            <select id="continentes">
+            <option value="0" selected>--select a continent--</option>
+        </select>
+        <label>Countries(<span id="numberCountries"></span>)</label>
+        <label>Companies(<span id="numberCompanies"></span>)</label>
+        <label>Company names(<span id="companyNames"></span>)</label>
+        </div>
+        
+        <table>
+            <tr>
+                <td>Countries</td>
+                <td>Num</td>
+                <td>Companies</td>
+            </tr>
+        </table>
+    </div>
+    <script src="Companies.js"></script>
 </body>
 </html>
