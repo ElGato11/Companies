@@ -8,23 +8,29 @@
 </head>
 <body>
     <div id="container">
-        <div id="options">
+        <!---Menu de opciones-->
+        <div id="menu">
             <select id="continentes">
-            <option value="0" selected>--select a continent--</option>
-        </select>
-        <label>Countries(<span id="numberCountries"></span>)</label>
-        <label>Companies(<span id="numberCompanies"></span>)</label>
-        <label>Company names(<span id="companyNames"></span>)</label>
+                <option value="0" selected>--select a continent--</option>
+            </select>
+            <div>Countries(<span id="numberCountries"></span>)</div>
+            <div>Companies(<span id="numberCompanies"></span>)</div>
+            <div>Company names(<span id="companyNames"></span>)</div>
+        </div>
+        <!--Tabla de contenidos-->
+        <div>
+            <table>
+                <tr>
+                    <td>Countries</td>
+                    <td>Num</td>
+                    <td>Companies</td>
+                </tr>
+            </table>
         </div>
         
-        <table>
-            <tr>
-                <td>Countries</td>
-                <td>Num</td>
-                <td>Companies</td>
-            </tr>
-        </table>
     </div>
-    <script src="Companies.js"></script>
+    
+    
+    <script src="companies.js"></script>
 </body>
 </html>

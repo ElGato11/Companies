@@ -498,3 +498,22 @@ const companies = [
         }
     ]
 ;
+//continents var
+let continent = 0;
+
+function drawOptions(){
+    let selectMenu = document.querySelector("#continentes");
+    companies.forEach(obj => {
+        let option = document.createElement("option");
+        option.setAttribute("value",obj.continent);
+        option.innerText = obj.continent;
+        selectMenu.appendChild(option);
+        console.log(selectMenu);
+    });
+}
+
+function drawAll(){
+companies
+};
+drawOptions();
+
