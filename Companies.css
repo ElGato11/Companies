@@ -30,3 +30,9 @@ table td{
 table{
     width: 75%;
 }
+table tr:first-child td{
+    padding: 1%;
+}
+#continentSelector{
+    padding: 0.2em;
+}
