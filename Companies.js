@@ -508,12 +508,16 @@ function drawOptions(){
         option.setAttribute("value",obj.continent);
         option.innerText = obj.continent;
         selectMenu.appendChild(option);
-        console.log(selectMenu);
     });
 }
 
 function drawAll(){
-companies
+let table = document.querySelector("tbody");
+let newElement = document.createElement("tr");
+newElement.innerHTML = "hola";
+table.appendChild(newElement);
+
 };
 drawOptions();
+drawAll();
 
