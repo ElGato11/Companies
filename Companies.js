@@ -501,8 +501,13 @@ const companies = [
 //continents var
 let continent = 0;
 
+let continentSelector = document.querySelector("#continentSelector");
+continentSelector.addEventListener("click",()=>{
+    document.querySelector("continents").value;
+})
+
 function drawOptions(){
-    let selectMenu = document.querySelector("#continentes");
+    let selectMenu = document.querySelector("#continents");
     companies.forEach(obj => {
         let option = document.createElement("option");
         option.setAttribute("value",obj.continent);
@@ -511,13 +516,43 @@ function drawOptions(){
     });
 }
 
-function drawAll(){
-let table = document.querySelector("tbody");
-let newElement = document.createElement("tr");
-newElement.innerHTML = "hola";
-table.appendChild(newElement);
+function getCountries(){
+let result = [];
+//continent
+companies.forEach(object =>{
+    //country
+    object.countries.forEach(country => {
+        result.push(country.name);
+    });
+});
+return result;
+}
 
-};
+function getCountriesCont(givenCont){
+    let result = [];
+    companies.find(cont => cont.continent == givenCont).countries.forEach(country =>{
+        result.push(country.name);
+});
+return result;
+}
+
+function drawCountries(list){
+    let count = 0;
+    let table = document.querySelector("tbody");
+    list.sort().forEach(name => {
+        let newTr = document.createElement("tr");
+        let newTd = document.createElement("td");
+        newTd.innerHTML = name;
+        newTr.appendChild(newTd);
+        newTr.innerHTML += "<td></td><td></td>";
+        table.appendChild(newTr);
+        
+        count ++;
+    } );
+
+    document.querySelector("#numberCountries").innerHTML = count;
+}
+
+
 drawOptions();
-drawAll();
-
+drawCountries(getCountries());
