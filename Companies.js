@@ -503,7 +503,10 @@ let continent = 0;
 
 let continentSelector = document.querySelector("#continentSelector");
 continentSelector.addEventListener("click",()=>{
-    document.querySelector("continents").value;
+    let contName = document.querySelector("#continents").value;
+    let table = document.querySelector("tbody");
+    Array.from(table.children).slice(1).forEach(child=>child.remove());
+    contName == 0 ? drawCountries(getCountries()) : drawCountries(getCountriesCont(contName));
 })
 
 function drawOptions(){
